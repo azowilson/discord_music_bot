@@ -5,6 +5,7 @@ from discord.ext import commands
 
 
 class music(commands.Cog):
+  songQueue = []
   def __init__(self, bot):
     self.bot = bot
 
