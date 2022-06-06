@@ -2,8 +2,11 @@ import discord
 from discord.ext import commands
 import youtube_dl
 import logging
-
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
+# print(os.getenv('WEB_HOOK_KEY'))
+key = os.getenv('WEB_HOOK_KEY')
 # cogs = [music]
 bot = commands.Bot(command_prefix='?')
 
@@ -53,5 +56,5 @@ async def resume(ctx):
     await ctx.send("Resume")
 
 
-bot.run("OTM5MDYzNzU5NDQyNDM2MTM2.YfzZRw.48CKnHG3-JL3nlqWmnFf3twxpIo")
+bot.run(key)
 
